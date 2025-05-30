@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Juego Bíblico</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+  <!-- Pantalla de login -->
+<div id="pantallaLogin" class="contenedor pantalla">
+  <h2>Iniciar Sesión</h2>
+  <label for="correo">Correo electrónico:</label>
+  <input type="email" id="correo" placeholder="ejemplo@email.com" required>
+  <button onclick="iniciarSesion()">Entrar</button>
+</div>
+
+
+  <!-- Pantalla de bienvenida -->
+  <div id="pantallaBienvenida" class="contenedor pantalla">
+    <div class="barra-usuario">
+      <span id="usuarioBienvenida"></span>
+      <button onclick="cerrarSesion()">Cerrar sesión</button>
+    </div>
+    <h2 id="saludoUsuario">¡Bienvenido!</h2>
+    <p>Selecciona una opción para comenzar:</p>
+    <div id="menuOpciones">
+      <button onclick="mostrarSeccion('seccionJuegos')">🎮 Juegos Bíblicos</button>
+      <button onclick="mostrarSeccion('seccionVideos')">🎬 Series Bíblicas</button>
+      <button onclick="mostrarSeccion('seccionLecturas')">📖 Lecturas Diarias</button>
+      <button onclick="mostrarSeccion('seccionCuriosidades')">💡 Curiosidades</button>
+      <button onclick="mostrarSeccion('seccionVersiculo')">✝️ Versículo del Día</button>
+    </div>
+  </div>
+
+  <div id="seccionJuegos" class="contenedor pantalla">
+    <h2>🎮 Juegos Bíblicos</h2>
+  <div id="opcionesJuegos">
+    <h3>Selecciona un juego:</h3>
+    <button onclick="comenzarJuego('juego1')">Juego 1</button>
+    <button onclick="comenzarJuego('juego2')">Juego 2</button>
+    <button onclick="comenzarJuego('juego3')">Juego 3</button>
+<button onclick="mostrarPantalla('pantallaBienvenida')" style="margin-top: 20px;">🔙 Volver al Menú</button> 
+</div>
+</div>
+
+<div id="seccionVideos" class="contenedor pantalla">
+  <h2>🎬 Series Bíblicas</h2>
+
+  <select id="selectorSeries" onchange="cambiarSerieDesdeSelect()">
+    <option disabled selected>Selecciona una serie</option>
+    <option value="moises">📜 Moisés y los Diez Mandamientos</option>
+    <option value="josue">⚔️ Josué</option>
+    <option value="reyes">👑 Reyes</option>
+    <option value="genesis">🌍 Génesis</option>
+    <!-- Agrega más aquí -->
+  </select>
+
+  <div style="margin: 15px 0;">
+    <strong id="tituloSerie"></strong>
+    <p id="descripcionSerie" style="font-size: 0.95em;"></p>
+  </div>
+
+  <video id="videoBiblico" controls width="100%" style="border-radius: 10px;">
+    <source src="" type="video/mp4">
+    Tu navegador no soporta el video.
+  </video>
+<div style="margin-top: 15px;">
+    <button onclick="cambiarSerie('video1.mp4')">Serie 1</button>
+    <button onclick="cambiarSerie('video2.mp4')">Serie 2</button>
+    <button onclick="cambiarSerie('video3.mp4')">Serie 3</button>
+  </div>
+  <button onclick="mostrarPantalla('pantallaBienvenida')" style="margin-top: 20px;">🔙 Volver al Menú</button>
+</div>
+</div>
+
+  <div id="seccionLecturas" class="contenedor pantalla">
+    <h2>📖 Lecturas Diarias</h2>
+    <p>“Lámpara es a mis pies tu palabra…” (Salmo 119:105)</p>
+    <ul>
+      <li>📆 Día 1: Juan 3:16</li>
+      <li>📆 Día 2: Salmo 23</li>
+    </ul>
+    <button onclick="mostrarPantalla()">🔙 Volver</button>
+  </div>
+
+  <div id="seccionCuriosidades" class="contenedor pantalla">
+    <h2>💡 Curiosidades Bíblicas</h2>
+    <ul>
+      <li>🔹 La Biblia fue escrita en 3 idiomas.</li>
+      <li>🔹 Hay 66 libros en total.</li>
+    </ul>
+    <button onclick="mostrarPantalla()">🔙 Volver</button>
+  </div>
+
+  <div id="seccionVersiculo" class="contenedor pantalla">
+    <h2>✝️ Versículo del Día</h2>
+    <blockquote>
+      “El Señor es mi pastor; nada me faltará.”<br>
+      <cite>Salmo 23:1</cite>
+    </blockquote>
+    <button onclick="volverInicio()">🔙 Volver</button>
+  </div>
+
+  <div id="pantallaJuego" class="contenedor pantalla">
+    <h1>Juego Bíblico</h1>
+    <p id="jugadorActual"></p>
+    <p id="pregunta"></p>
+    <div id="opciones"></div>
+    <div id="barraTiempo">
+      <div id="barraTiempoProgreso"></div>
+    </div>      
+    <p id="resultado"></p>
+    <p id="puntaje">Puntaje: 0</p>
+    <button onclick="siguientePregunta()" id="btnSiguiente">Siguiente</button>
+  </div>
+
+  <div id="pantallaFinal" class="contenedor pantalla">
+    <h2>🎉 Juego Terminado</h2>
+    <p id="resumenFinal"></p>
+    <p id="puntajeMaximo"></p>
+    <div id="estrellasFinales"></div>
+    <div id="rankingJugadores"></div>
+    <button onclick="reiniciarJuego()">Volver a Jugar</button>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "TU_API_KEY",
+      authDomain: "TU_DOMINIO.firebaseapp.com",
+      projectId: "TU_ID",
+      storageBucket: "TU_BUCKET",
+      messagingSenderId: "TU_ID",
+      appId: "TU_APP_ID",
+      databaseURL: "https://TU_ID.firebaseio.com"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1002 @@
+[
+  {
+    "pregunta": "¿Cuál es el primer libro de la Biblia Reina Valera?",
+    "opciones": {
+      "a": "Éxodo",
+      "b": "Génesis",
+      "c": "Levítico",
+      "d": "Mateo"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Quién fue el primer hombre creado por Dios según Génesis?",
+    "opciones": {
+      "a": "Noé",
+      "b": "Abraham",
+      "c": "Adán",
+      "d": "Moisés"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Cómo se llamó la esposa de Adán?",
+    "opciones": {
+      "a": "Sara",
+      "b": "Rebeca",
+      "c": "Eva",
+      "d": "Raquel"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Quién construyó el arca para salvar a su familia y a los animales del diluvio?",
+    "opciones": {
+      "a": "Abraham",
+      "b": "Noé",
+      "c": "Jacob",
+      "d": "Isaac"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿A quién llamó Dios para sacar a los israelitas de Egipto?",
+    "opciones": {
+      "a": "Josué",
+      "b": "David",
+      "c": "Moisés",
+      "d": "Sansón"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Cuántos mandamientos principales entregó Dios a Moisés en el Monte Sinaí?",
+    "opciones": {
+      "a": "Cinco",
+      "b": "Diez",
+      "c": "Doce",
+      "d": "Siete"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Quién fue el sucesor de Moisés que introdujo a los israelitas en la Tierra Prometida?",
+    "opciones": {
+      "a": "Caleb",
+      "b": "Aarón",
+      "c": "Josué",
+      "d": "Samuel"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Qué mujer cananea ayudó a los espías israelitas en Jericó?",
+    "opciones": {
+      "a": "Débora",
+      "b": "Rahab",
+      "c": "Rut",
+      "d": "Jael"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Quién fue el juez de Israel conocido por su gran fuerza, que provenía de su cabello?",
+    "opciones": {
+      "a": "Gedeón",
+      "b": "Jefté",
+      "c": "Sansón",
+      "d": "Barac"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Qué moabita, nuera de Noemí, mostró gran lealtad y se convirtió en antepasada de David?",
+    "opciones": {
+      "a": "Orfa",
+      "b": "Rut",
+      "c": "Tamar",
+      "d": "Mical"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Quién fue el primer rey de Israel?",
+    "opciones": {
+      "a": "David",
+      "b": "Salomón",
+      "c": "Saúl",
+      "d": "Jeroboam"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿A qué gigante filisteo derrotó David con una honda y una piedra?",
+    "opciones": {
+      "a": "Og",
+      "b": "Goliat",
+      "c": "Sihón",
+      "d": "Agag"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Quién fue el rey de Israel conocido por su gran sabiduría y por construir el Templo de Jerusalén?",
+    "opciones": {
+      "a": "Josías",
+      "b": "Ezequías",
+      "c": "Salomón",
+      "d": "Asa"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Qué profeta fue llevado al cielo en un carro de fuego?",
+    "opciones": {
+      "a": "Eliseo",
+      "b": "Isaías",
+      "c": "Elías",
+      "d": "Jeremías"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Qué profeta fue tragado por un gran pez?",
+    "opciones": {
+      "a": "Amós",
+      "b": "Oseas",
+      "c": "Jonás",
+      "d": "Miqueas"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Cuál de estos libros es considerado un libro de poesía en el Antiguo Testamento?",
+    "opciones": {
+      "a": "Números",
+      "b": "Salmos",
+      "c": "Ezequiel",
+      "d": "Hechos"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Quién fue el profeta que tuvo la visión del valle de los huesos secos?",
+    "opciones": {
+      "a": "Daniel",
+      "b": "Ezequiel",
+      "c": "Isaías",
+      "d": "Oseas"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Qué joven judío interpretó los sueños del rey Nabucodonosor en Babilonia?",
+    "opciones": {
+      "a": "Mardoqueo",
+      "b": "Esdras",
+      "c": "Daniel",
+      "d": "Nehemías"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Cuál es el último libro del Antiguo Testamento en la Reina Valera?",
+    "opciones": {
+      "a": "Zacarías",
+      "b": "Malaquías",
+      "c": "Hageo",
+      "d": "Abdías"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Cuál es el primer Evangelio del Nuevo Testamento?",
+    "opciones": {
+      "a": "Marcos",
+      "b": "Lucas",
+      "c": "Mateo",
+      "d": "Juan"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Dónde nació Jesús?",
+    "opciones": {
+      "a": "Nazaret",
+      "b": "Jerusalén",
+      "c": "Belén",
+      "d": "Capernaum"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Quién bautizó a Jesús en el río Jordán?",
+    "opciones": {
+      "a": "Pedro",
+      "b": "Juan el Bautista",
+      "c": "Santiago",
+      "d": "Andrés"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Cuántos apóstoles escogió Jesús principalmente?",
+    "opciones": {
+      "a": "Diez",
+      "b": "Once",
+      "c": "Doce",
+      "d": "Trece"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Cuál de los apóstoles negó a Jesús tres veces antes de que cantara el gallo?",
+    "opciones": {
+      "a": "Judas Iscariote",
+      "b": "Tomás",
+      "c": "Pedro",
+      "d": "Juan"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Qué apóstol traicionó a Jesús?",
+    "opciones": {
+      "a": "Pedro",
+      "b": "Santiago",
+      "c": "Judas Iscariote",
+      "d": "Mateo"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿En qué día de la semana resucitó Jesús?",
+    "opciones": {
+      "a": "Sábado",
+      "b": "Viernes",
+      "c": "Domingo",
+      "d": "Lunes"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Quién se encontró con Jesús resucitado primero, según el Evangelio de Juan?",
+    "opciones": {
+      "a": "María Magdalena",
+      "b": "Pedro",
+      "c": "María, madre de Jesús",
+      "d": "Tomás"
+    },
+    "respuesta_correcta": "a"
+  },
+  {
+    "pregunta": "¿Qué libro del Nuevo Testamento relata la historia de la iglesia primitiva y los viajes misioneros de Pablo?",
+    "opciones": {
+      "a": "Romanos",
+      "b": "Hechos de los Apóstoles",
+      "c": "Apocalipsis",
+      "d": "Gálatas"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Quién fue el autor principal de las epístolas (cartas) en el Nuevo Testamento?",
+    "opciones": {
+      "a": "Pedro",
+      "b": "Juan",
+      "c": "Pablo",
+      "d": "Santiago"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "Originalmente conocido como Saulo, ¿quién se convirtió en el apóstol Pablo después de su conversión camino a Damasco?",
+    "opciones": {
+      "a": "Timoteo",
+      "b": "Bernabé",
+      "c": "Saulo de Tarso",
+      "d": "Silas"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Cuál es el tema principal de la Primera Epístola a los Corintios, capítulo 13?",
+    "opciones": {
+      "a": "La fe",
+      "b": "La esperanza",
+      "c": "El amor (caridad)",
+      "d": "Los dones espirituales"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Qué fruto del Espíritu se menciona primero en Gálatas 5:22-23?",
+    "opciones": {
+      "a": "Paz",
+      "b": "Amor",
+      "c": "Gozo",
+      "d": "Paciencia"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Cuál es el último libro del Nuevo Testamento?",
+    "opciones": {
+      "a": "Judas",
+      "b": "Apocalipsis (Revelación)",
+      "c": "Hebreos",
+      "d": "3 Juan"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿A quién se le atribuye tradicionalmente la autoría del libro de Apocalipsis?",
+    "opciones": {
+      "a": "Apóstol Pablo",
+      "b": "Apóstol Pedro",
+      "c": "Apóstol Juan",
+      "d": "Lucas"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Cuántos hijos tuvo Jacob, que se convirtieron en las doce tribus de Israel?",
+    "opciones": {
+      "a": "10",
+      "b": "11",
+      "c": "12",
+      "d": "13"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Cuál fue la primera plaga enviada a Egipto?",
+    "opciones": {
+      "a": "Ranas",
+      "b": "Piojos",
+      "c": "Agua convertida en sangre",
+      "d": "Muerte de los primogénitos"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿En qué monte recibió Moisés los Diez Mandamientos?",
+    "opciones": {
+      "a": "Monte Carmelo",
+      "b": "Monte Sinaí",
+      "c": "Monte de los Olivos",
+      "d": "Monte Nebo"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Qué rey de Judá fue conocido por su piedad y por purificar el templo?",
+    "opciones": {
+      "a": "Manasés",
+      "b": "Acab",
+      "c": "Josías",
+      "d": "Roboam"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Quién fue la reina judía que salvó a su pueblo de la aniquilación en Persia?",
+    "opciones": {
+      "a": "Jezabel",
+      "b": "Abigail",
+      "c": "Ester",
+      "d": "Dalila"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Cuál es el Salmo más conocido que comienza con 'Jehová es mi pastor'?",
+    "opciones": {
+      "a": "Salmo 1",
+      "b": "Salmo 23",
+      "c": "Salmo 51",
+      "d": "Salmo 91"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Qué profeta se lamentó por la destrucción de Jerusalén?",
+    "opciones": {
+      "a": "Isaías",
+      "b": "Jeremías",
+      "c": "Ezequiel",
+      "d": "Daniel"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Cuál de los siguientes NO es uno de los Evangelios Sinópticos?",
+    "opciones": {
+      "a": "Mateo",
+      "b": "Marcos",
+      "c": "Lucas",
+      "d": "Juan"
+    },
+    "respuesta_correcta": "d"
+  },
+  {
+    "pregunta": "¿Qué parábola enseña sobre el perdón ilimitado?",
+    "opciones": {
+      "a": "El sembrador",
+      "b": "El buen samaritano",
+      "c": "El siervo inmisericorde",
+      "d": "Las diez vírgenes"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿En qué ciudad vivía Jesús durante gran parte de su ministerio en Galilea?",
+    "opciones": {
+      "a": "Jerusalén",
+      "b": "Nazaret",
+      "c": "Capernaum",
+      "d": "Betania"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Quién fue el primer mártir cristiano, según el libro de Hechos?",
+    "opciones": {
+      "a": "Santiago, el hermano de Juan",
+      "b": "Esteban",
+      "c": "Pablo",
+      "d": "Pedro"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿A qué iglesia se dirige la carta que contiene el 'Capítulo de la Fe' (Hebreos 11)?",
+    "opciones": {
+      "a": "A los Romanos",
+      "b": "A los Corintios",
+      "c": "A los Hebreos",
+      "d": "A los Gálatas"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Qué significa 'Emmanuel'?",
+    "opciones": {
+      "a": "Dios salva",
+      "b": "Dios con nosotros",
+      "c": "Príncipe de Paz",
+      "d": "Admirable Consejero"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Quién era el hermano de Moisés que sirvió como su portavoz?",
+    "opciones": {
+      "a": "Josué",
+      "b": "Aarón",
+      "c": "Caleb",
+      "d": "Eliezer"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Qué instrumento tocaba David para calmar al rey Saúl?",
+    "opciones": {
+      "a": "Flauta",
+      "b": "Arpa",
+      "c": "Tambor",
+      "d": "Lira"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿A qué ciudad fue enviado Jonás a predicar arrepentimiento?",
+    "opciones": {
+      "a": "Babilonia",
+      "b": "Nínive",
+      "c": "Damasco",
+      "d": "Tarsis"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Cuál de estos hombres NO caminó sobre el agua con Jesús?",
+    "opciones": {
+      "a": "Pedro",
+      "b": "Juan",
+      "c": "Ninguno de los apóstoles caminó sobre el agua",
+      "d": "Jesús caminó solo"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Quién escribió la mayor parte de los Proverbios?",
+    "opciones": {
+      "a": "David",
+      "b": "Salomón",
+      "c": "Moisés",
+      "d": "Daniel"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Cuál fue la señal del pacto de Dios con Noé?",
+    "opciones": {
+      "a": "La circuncisión",
+      "b": "El arco iris",
+      "c": "El sábado",
+      "d": "Una estrella"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Cuántos libros hay en el Nuevo Testamento de la Biblia Reina Valera?",
+    "opciones": {
+      "a": "27",
+      "b": "39",
+      "c": "66",
+      "d": "24"
+    },
+    "respuesta_correcta": "a"
+  },
+  {
+    "pregunta": "¿Cuántos libros hay en el Antiguo Testamento de la Biblia Reina Valera?",
+    "opciones": {
+      "a": "27",
+      "b": "39",
+      "c": "66",
+      "d": "46"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Quién era el padre de Juan el Bautista?",
+    "opciones": {
+      "a": "José",
+      "b": "Simeón",
+      "c": "Zacarías",
+      "d": "Elí"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Qué mujer, esposa de Urías heteo, cometió adulterio con David?",
+    "opciones": {
+      "a": "Mical",
+      "b": "Abigail",
+      "c": "Betsabé",
+      "d": "Ahinoam"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Cuál de los siguientes es conocido como el 'Sermón del Monte'?",
+    "opciones": {
+      "a": "Mateo 5-7",
+      "b": "Lucas 15",
+      "c": "Juan 3",
+      "d": "Marcos 4"
+    },
+    "respuesta_correcta": "a"
+  },
+  {
+    "pregunta": "¿A qué discípulo dijo Jesús: 'Sobre esta roca edificaré mi iglesia'?",
+    "opciones": {
+      "a": "Juan",
+      "b": "Santiago",
+      "c": "Pedro",
+      "d": "Andrés"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Qué comida multiplicó Jesús para alimentar a cinco mil hombres, además de mujeres y niños?",
+    "opciones": {
+      "a": "Siete panes y unos pocos pececillos",
+      "b": "Cinco panes y dos pececillos",
+      "c": "Dos panes y cinco pececillos",
+      "d": "Doce cestas de pan"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Quién fue el emperador romano cuando Jesús nació?",
+    "opciones": {
+      "a": "Nerón",
+      "b": "Tiberio",
+      "c": "Augusto César",
+      "d": "Claudio"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Qué profeta tuvo una esposa infiel como ilustración de la infidelidad de Israel hacia Dios?",
+    "opciones": {
+      "a": "Amós",
+      "b": "Oseas",
+      "c": "Joel",
+      "d": "Miqueas"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Cuál es el mandamiento más importante, según Jesús?",
+    "opciones": {
+      "a": "No matarás",
+      "b": "Honra a tu padre y a tu madre",
+      "c": "Amarás al Señor tu Dios con todo tu corazón, y con toda tu alma, y con toda tu mente",
+      "d": "No robarás"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿En qué isla fue exiliado el apóstol Juan, donde recibió la Revelación?",
+    "opciones": {
+      "a": "Creta",
+      "b": "Chipre",
+      "c": "Patmos",
+      "d": "Malta"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Quién fue el recaudador de impuestos que Jesús llamó para ser su discípulo?",
+    "opciones": {
+      "a": "Zaqueo",
+      "b": "Mateo (Leví)",
+      "c": "Bartolomé",
+      "d": "Simón el Zelote"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Cuál de los siguientes libros NO es una Epístola Pastoral?",
+    "opciones": {
+      "a": "1 Timoteo",
+      "b": "2 Timoteo",
+      "c": "Tito",
+      "d": "Filemón"
+    },
+    "respuesta_correcta": "d"
+  },
+  {
+    "pregunta": "¿Qué rey vio una escritura en la pared durante un banquete?",
+    "opciones": {
+      "a": "Nabucodonosor",
+      "b": "Belsasar",
+      "c": "Darío",
+      "d": "Ciro"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿A quién se le conoce como el 'apóstol de los gentiles'?",
+    "opciones": {
+      "a": "Pedro",
+      "b": "Juan",
+      "c": "Pablo",
+      "d": "Santiago"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Cuántos días y noches llovió durante el diluvio universal?",
+    "opciones": {
+      "a": "7 días y 7 noches",
+      "b": "40 días y 40 noches",
+      "c": "120 días y 120 noches",
+      "d": "150 días y 150 noches"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Cuál es el nombre hebreo de Dios que se traduce comúnmente como 'SEÑOR' en la Reina Valera?",
+    "opciones": {
+      "a": "Elohim",
+      "b": "Adonai",
+      "c": "YHWH (Yahweh/Jehová)",
+      "d": "El Shaddai"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Qué ciudad es conocida como la 'Ciudad de David'?",
+    "opciones": {
+      "a": "Belén",
+      "b": "Hebrón",
+      "c": "Jerusalén",
+      "d": "Samaria"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Qué mujer ungió los pies de Jesús con perfume costoso en Betania?",
+    "opciones": {
+      "a": "María Magdalena",
+      "b": "Marta",
+      "c": "María, hermana de Lázaro",
+      "d": "Salomé"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Quién fue el sumo sacerdote durante el juicio de Jesús?",
+    "opciones": {
+      "a": "Anás",
+      "b": "Caifás",
+      "c": "Abiatar",
+      "d": "Sadoc"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Qué apóstol fue conocido como 'el incrédulo' porque dudó de la resurrección de Jesús hasta que lo vio?",
+    "opciones": {
+      "a": "Felipe",
+      "b": "Bartolomé",
+      "c": "Tomás",
+      "d": "Tadeo"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Cuál de estos libros pertenece a los Profetas Menores?",
+    "opciones": {
+      "a": "Isaías",
+      "b": "Jeremías",
+      "c": "Ezequiel",
+      "d": "Amós"
+    },
+    "respuesta_correcta": "d"
+  },
+  {
+    "pregunta": "¿Qué significa la palabra 'Evangelio'?",
+    "opciones": {
+      "a": "Ley de Dios",
+      "b": "Buenas Nuevas",
+      "c": "Profecía Antigua",
+      "d": "Alianza Eterna"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Quién fue el padre de Abraham?",
+    "opciones": {
+      "a": "Noé",
+      "b": "Sem",
+      "c": "Taré",
+      "d": "Lot"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿A qué país huyeron José, María y el niño Jesús para escapar de Herodes?",
+    "opciones": {
+      "a": "Siria",
+      "b": "Egipto",
+      "c": "Babilonia",
+      "d": "Galilea"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Qué dos hombres del Antiguo Testamento aparecieron con Jesús en el Monte de la Transfiguración?",
+    "opciones": {
+      "a": "Abraham e Isaac",
+      "b": "David y Salomón",
+      "c": "Moisés y Elías",
+      "d": "Isaías y Jeremías"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Cuál fue el primer milagro de Jesús registrado en el Evangelio de Juan?",
+    "opciones": {
+      "a": "La alimentación de los 5000",
+      "b": "Caminar sobre el agua",
+      "c": "Convertir el agua en vino en Caná",
+      "d": "Sanar al ciego de nacimiento"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Qué río tuvo que cruzar Israel para entrar en la Tierra Prometida?",
+    "opciones": {
+      "a": "Nilo",
+      "b": "Éufrates",
+      "c": "Jordán",
+      "d": "Tigris"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Quién fue el profeta que ungió a David como rey de Israel?",
+    "opciones": {
+      "a": "Natán",
+      "b": "Samuel",
+      "c": "Elías",
+      "d": "Eliseo"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Cuál es la 'Armadura de Dios' descrita en Efesios 6?",
+    "opciones": {
+      "a": "Un conjunto de armas literales para la guerra",
+      "b": "Una protección espiritual contra el mal",
+      "c": "Los muros de Jerusalén",
+      "d": "La ley de Moisés"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Quién era el gobernador romano que sentenció a Jesús a la crucifixión?",
+    "opciones": {
+      "a": "Herodes Antipas",
+      "b": "Poncio Pilato",
+      "c": "Félix",
+      "d": "Festo"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Cuál de los doce hijos de Jacob era el favorito de su padre y fue vendido por sus hermanos?",
+    "opciones": {
+      "a": "Rubén",
+      "b": "Judá",
+      "c": "José",
+      "d": "Benjamín"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Qué libro contiene la historia de Sansón y Dalila?",
+    "opciones": {
+      "a": "Génesis",
+      "b": "Éxodo",
+      "c": "Jueces",
+      "d": "Rut"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Cuál de estas epístolas fue escrita a un dueño de esclavo acerca de su esclavo fugitivo?",
+    "opciones": {
+      "a": "Tito",
+      "b": "Filemón",
+      "c": "2 Juan",
+      "d": "3 Juan"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Qué construyeron los israelitas en el desierto como lugar de adoración móvil?",
+    "opciones": {
+      "a": "El Templo de Salomón",
+      "b": "El Tabernáculo",
+      "c": "Un altar de piedra simple",
+      "d": "Sinagogas"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿En qué ciudad fue apedreado Esteban, convirtiéndose en el primer mártir cristiano?",
+    "opciones": {
+      "a": "Samaria",
+      "b": "Antioquía",
+      "c": "Jerusalén",
+      "d": "Damasco"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Cuál de los Diez Mandamientos prohíbe la idolatría?",
+    "opciones": {
+      "a": "El primero y el segundo",
+      "b": "El tercero",
+      "c": "El cuarto",
+      "d": "El quinto"
+    },
+    "respuesta_correcta": "a"
+  },
+  {
+    "pregunta": "¿Qué pariente de Jesús era también un predicador y preparó el camino para Su ministerio?",
+    "opciones": {
+      "a": "Santiago, su hermano",
+      "b": "Judas, su hermano",
+      "c": "Juan el Bautista, su primo",
+      "d": "Simón Pedro, su discípulo"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Cuál de los siguientes NO es un 'fruto del Espíritu' mencionado en Gálatas?",
+    "opciones": {
+      "a": "Amor",
+      "b": "Sabiduría",
+      "c": "Gozo",
+      "d": "Paz"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Por cuántas piezas de plata vendió Judas a Jesús?",
+    "opciones": {
+      "a": "20",
+      "b": "30",
+      "c": "40",
+      "d": "50"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Qué profeta fue llamado por Dios cuando era muy joven y respondió: 'Heme aquí, envíame a mí'?",
+    "opciones": {
+      "a": "Jeremías",
+      "b": "Ezequiel",
+      "c": "Isaías",
+      "d": "Samuel"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Quién fue la madre de Samuel?",
+    "opciones": {
+      "a": "Elisabet",
+      "b": "Ana",
+      "c": "Sara",
+      "d": "Rebeca"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿A qué tribu de Israel pertenecía el apóstol Pablo?",
+    "opciones": {
+      "a": "Judá",
+      "b": "Leví",
+      "c": "Benjamín",
+      "d": "Dan"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Qué tipo de árbol maldijo Jesús por no tener fruto, y se secó?",
+    "opciones": {
+      "a": "Olivo",
+      "b": "Vid",
+      "c": "Higuera",
+      "d": "Manzano"
+    },
+    "respuesta_correcta": "c"
+  },
+  {
+    "pregunta": "¿Cuál es el libro más corto del Antiguo Testamento?",
+    "opciones": {
+      "a": "Rut",
+      "b": "Abdías",
+      "c": "Nahúm",
+      "d": "Hageo"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Cuál es el libro más corto del Nuevo Testamento?",
+    "opciones": {
+      "a": "Filemón",
+      "b": "2 Juan",
+      "c": "3 Juan",
+      "d": "Judas"
+    },
+    "respuesta_correcta": "b"
+  },
+  {
+    "pregunta": "¿Qué rey de Israel fue el hijo de David y Betsabé?",
+    "opciones": {
+      "a": "Absalón",
+      "b": "Amnón",
+      "c": "Salomón",
+      "d": "Adonías"
+    },
+    "respuesta_correcta": "c"
+  }
+]

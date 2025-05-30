@@ -1,0 +1,254 @@
+/* Estilo base */
+body {
+  font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #dcedc8, #fffde7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Contenedor principal */
+.contenedor {
+  background-color: #ffffffee;
+  border-radius: 18px;
+  padding: 35px 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.contenedor:hover {
+  transform: scale(1.01);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos */
+h1 {
+  color: #004d40;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+h2, h3 {
+  color: #00695c;
+}
+
+/* Inputs login / inicio */
+#pantallaInicio input,
+#pantallaLogin input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  margin: 15px 0;
+  transition: border-color 0.3s;
+}
+
+#pantallaInicio input:focus,
+#pantallaLogin input:focus {
+  border-color: #1e88e5;
+  outline: none;
+}
+
+#pantallaLogin button,
+#pantallaInicio button {
+  background-color: #43a047;
+  margin-top: 10px;
+  width: 100%;
+  color: white;
+}
+
+#pantallaLogin button:hover,
+#pantallaInicio button:hover {
+  background-color: #2e7d32;
+  transform: scale(1.05);
+}
+
+/* Pantallas */
+.pantalla {
+  display: none;
+}
+
+.activa {
+  display: block !important;
+}
+
+/* Menú opciones */
+#menuOpciones {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+#menuOpciones button {
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #1e88e5;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#menuOpciones button:hover {
+  background-color: #1565c0;
+  transform: translateY(-2px);
+}
+
+/* Botones generales */
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 8px 4px;
+  transition: all 0.3s ease;
+}
+
+#btnInicio {
+  background-color: #43a047;
+  color: white;
+}
+
+#btnInicio:hover {
+  background-color: #2e7d32;
+  transform: scale(1.05);
+}
+
+#btnSiguiente {
+  background-color: #1e88e5;
+  color: white;
+}
+
+#btnSiguiente:hover {
+  background-color: #1565c0;
+  transform: scale(1.05);
+}
+
+/* Juego: pregunta, resultado, puntaje */
+#pregunta, #puntaje, #resultado {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+#puntaje {
+  color: #424242;
+}
+
+#resultado.correcto {
+  color: #2e7d32;
+}
+
+#resultado.incorrecto {
+  color: #c62828;
+}
+
+/* Opciones de respuesta */
+#opciones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+#opciones button {
+  padding: 12px;
+  background-color: #00838f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#opciones button:hover {
+  background-color: #005662;
+  transform: translateY(-2px);
+}
+
+/* Barra de tiempo */
+#barraTiempo {
+  width: 100%;
+  height: 12px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+#barraTiempoProgreso {
+  height: 100%;
+  background-color: #43a047;
+  width: 100%;
+  transition: width 1s linear;
+}
+
+/* Barra superior de usuario */
+.barra-usuario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e8f5e9;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 0.95em;
+  color: #2e7d32;
+}
+
+.barra-usuario button {
+  padding: 6px 12px;
+  font-size: 0.9em;
+  background-color: #ef5350;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.barra-usuario button:hover {
+  background-color: #c62828;
+  transform: scale(1.02);
+}
+
+/* Animaciones */
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #opciones {
+    grid-template-columns: 1fr;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  iframe {
+    height: 200px;
+  }
+}
