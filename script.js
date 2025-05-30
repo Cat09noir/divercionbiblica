@@ -53,164 +53,161 @@ function mostrarPantalla(idMostrar) {
 }
 
 
-const barraProgreso = document.getElementById("barraTiempoProgreso");
-const sonidoCorrecto = new Audio("assets/sonido_correcto.mp3");
-const sonidoIncorrecto = new Audio("assets/sonido_incorrecto.mp3");
-
+// ✅ Esta es la función que activa el juego al presionar el botón “Juego 1”
 function iniciarJuego() {
-    const inputNombre = document.getElementById("nombreJugador");
-    if (!inputNombre.value.trim()) {
-        alert("Por favor, ingresa tu nombre.");
-        return;
-    }
-
-    nombreJugador = inputNombre.value.trim();
-    cambiarPantalla("pantallaInicio", "pantallaBienvenida");
-    document.getElementById("saludoUsuario").innerText = `¡Bienvenido, ${nombreJugador}!`;
+  mostrarPantalla("pantallaJuego");
+  document.getElementById("jugadorActual").innerText = `👤 Jugador: ${nombreJugador}`;
+  comenzarJuego();
 }
 
+// ✅ Esta función carga las preguntas desde el JSON
 function comenzarJuego() {
-    fetch("preguntas_1000.json")
-        .then(res => res.json())
-        .then(data => {
-            const preguntasArray = Array.isArray(data) ? data : data.preguntas;
-            if (!Array.isArray(preguntasArray)) {
-                throw new Error("La estructura del JSON es incorrecta.");
-            }
-            preguntas = preguntasArray.sort(() => Math.random() - 0.5).slice(0, 10);
-            indiceActual = 0;
-            puntaje = 0;
-            mostrarPregunta();
-        })
-        .catch(error => {
-            console.error("Error al cargar preguntas:", error);
-            alert("Hubo un problema al cargar las preguntas.");
-        });
-}
-
-function mostrarPregunta() {
-    clearInterval(temporizador);
-    tiempo = 15;
-
-    const preguntaActual = preguntas[indiceActual];
-    document.getElementById("pregunta").innerText = preguntaActual.pregunta;
-
-    const opcionesDiv = document.getElementById("opciones");
-    opcionesDiv.innerHTML = "";
-
-    preguntaActual.opciones.forEach((opcion, index) => {
-        const boton = document.createElement("button");
-        boton.innerText = opcion;
-        boton.classList.add("btn-opcion");
-        boton.onclick = () => verificarRespuesta(index);
-        opcionesDiv.appendChild(boton);
+  fetch("preguntas_1000.json")
+    .then(res => res.json())
+    .then(data => {
+      const preguntasArray = Array.isArray(data) ? data : data.preguntas;
+      if (!Array.isArray(preguntasArray)) {
+        throw new Error("Estructura del JSON incorrecta.");
+      }
+      preguntas = preguntasArray.sort(() => Math.random() - 0.5).slice(0, 10);
+      indiceActual = 0;
+      puntaje = 0;
+      mostrarPregunta();
+    })
+    .catch(error => {
+      console.error("Error al cargar preguntas:", error);
+      alert("Hubo un problema al cargar las preguntas.");
     });
-
-    document.getElementById("resultado").innerText = "";
-    document.getElementById("puntaje").innerText = `Puntaje: ${puntaje}`;
-    document.getElementById("btnSiguiente").style.display = "none";
-
-    barraProgreso.style.width = "100%";
-    temporizador = setInterval(() => {
-        tiempo--;
-        barraProgreso.style.width = `${(tiempo / 15) * 100}%`;
-        if (tiempo <= 0) {
-            clearInterval(temporizador);
-            verificarRespuesta(-1);
-        }
-    }, 1000);
 }
 
-function verificarRespuesta(indiceSeleccionado) {
-    clearInterval(temporizador);
-    const correcta = preguntas[indiceActual].correcta;
-    const resultado = document.getElementById("resultado");
+// ✅ Muestra una pregunta
+function mostrarPregunta() {
+  clearInterval(temporizador);
+  tiempo = 15;
 
-    if (indiceSeleccionado === correcta) {
-        resultado.innerText = "✅ ¡Correcto!";
-        resultado.className = "correcto fade-in";
-        sonidoCorrecto.play();
-        puntaje += 10;
-    } else if (indiceSeleccionado === -1) {
-        resultado.innerText = `⏰ Tiempo agotado. La respuesta era: ${preguntas[indiceActual].opciones[correcta]}`;
-        resultado.className = "incorrecto fade-in";
-        sonidoIncorrecto.play();
-    } else {
-        resultado.innerText = `❌ Incorrecto. La respuesta era: ${preguntas[indiceActual].opciones[correcta]}`;
-        resultado.className = "incorrecto fade-in";
-        sonidoIncorrecto.play();
+  const preguntaActual = preguntas[indiceActual];
+  document.getElementById("pregunta").innerText = preguntaActual.pregunta;
+
+  const opcionesDiv = document.getElementById("opciones");
+  opcionesDiv.innerHTML = "";
+
+  const keys = ["a", "b", "c", "d"];
+  keys.forEach(key => {
+    const textoOpcion = preguntaActual.opciones[key];
+    const boton = document.createElement("button");
+    boton.innerText = textoOpcion;
+    boton.classList.add("btn-opcion");
+    boton.onclick = () => verificarRespuesta(key);
+    opcionesDiv.appendChild(boton);
+  });
+
+  document.getElementById("resultado").innerText = "";
+  document.getElementById("puntaje").innerText = `Puntaje: ${puntaje}`;
+  document.getElementById("btnSiguiente").style.display = "none";
+
+  const barraProgreso = document.getElementById("barraTiempoProgreso");
+  barraProgreso.style.width = "100%";
+  temporizador = setInterval(() => {
+    tiempo--;
+    barraProgreso.style.width = `${(tiempo / 15) * 100}%`;
+    if (tiempo <= 0) {
+      clearInterval(temporizador);
+      verificarRespuesta(null);
     }
+  }, 1000);
+}
 
-    document.getElementById("puntaje").innerText = `Puntaje: ${puntaje}`;
-    document.getElementById("btnSiguiente").style.display = "inline-block";
+// ✅ Verifica la respuesta seleccionada
+function verificarRespuesta(opcionSeleccionada) {
+  clearInterval(temporizador);
+  const preguntaActual = preguntas[indiceActual];
+  const correcta = preguntaActual.respuesta_correcta;
+  const resultado = document.getElementById("resultado");
 
-    Array.from(document.getElementById("opciones").children).forEach(btn => btn.disabled = true);
+  if (opcionSeleccionada === correcta) {
+    resultado.innerText = "✅ ¡Correcto!";
+    resultado.className = "correcto fade-in";
+    sonidoCorrecto.play();
+    puntaje += 10;
+  } else if (opcionSeleccionada === null) {
+    resultado.innerText = `⏰ Tiempo agotado. La respuesta era: ${preguntaActual.opciones[correcta]}`;
+    resultado.className = "incorrecto fade-in";
+    sonidoIncorrecto.play();
+  } else {
+    resultado.innerText = `❌ Incorrecto. La respuesta era: ${preguntaActual.opciones[correcta]}`;
+    resultado.className = "incorrecto fade-in";
+    sonidoIncorrecto.play();
+  }
+
+  document.getElementById("puntaje").innerText = `Puntaje: ${puntaje}`;
+  document.getElementById("btnSiguiente").style.display = "inline-block";
+
+  Array.from(document.getElementById("opciones").children).forEach(btn => btn.disabled = true);
 }
 
 function siguientePregunta() {
-    indiceActual++;
-    if (indiceActual < preguntas.length) {
-        mostrarPregunta();
-    } else {
-        mostrarPantallaFinal();
-    }
+  indiceActual++;
+  if (indiceActual < preguntas.length) {
+    mostrarPregunta();
+  } else {
+    mostrarPantallaFinal();
+  }
 }
 
 function mostrarPantallaFinal() {
-    document.getElementById("pantallaJuego").classList.remove("activa");
-    document.getElementById("pantallaFinal").classList.add("activa");
+  mostrarPantalla("pantallaFinal");
 
-    if (puntaje > puntajeMaximo) {
-        puntajeMaximo = puntaje;
-        localStorage.setItem("puntajeMaximo", puntajeMaximo);
-    }
+  if (puntaje > puntajeMaximo) {
+    puntajeMaximo = puntaje;
+    localStorage.setItem("puntajeMaximo", puntajeMaximo);
+  }
 
-    document.getElementById("puntajeMaximo").innerText = `🏆 Puntaje más alto: ${puntajeMaximo}`;
-    document.getElementById("resumenFinal").innerText = `${nombreJugador}, tu puntaje final fue: ${puntaje}`;
+  document.getElementById("puntajeMaximo").innerText = `🏆 Puntaje más alto: ${puntajeMaximo}`;
+  document.getElementById("resumenFinal").innerText = `${nombreJugador}, tu puntaje final fue: ${puntaje}`;
 
-    let listaPuntajes = JSON.parse(localStorage.getItem("puntajesUsuarios")) || [];
-    listaPuntajes.push({ nombre: nombreJugador, puntaje: puntaje });
-    localStorage.setItem("puntajesUsuarios", JSON.stringify(listaPuntajes));
+  let listaPuntajes = JSON.parse(localStorage.getItem("puntajesUsuarios")) || [];
+  listaPuntajes.push({ nombre: nombreJugador, puntaje: puntaje });
+  localStorage.setItem("puntajesUsuarios", JSON.stringify(listaPuntajes));
 
-    mostrarEstrellas(puntaje);
-    mostrarRanking();
+  mostrarEstrellas(puntaje);
+  mostrarRanking();
 }
 
 function mostrarRanking() {
-    const contenedorRanking = document.getElementById("rankingJugadores");
-    contenedorRanking.innerHTML = "<h3>🏅 Ranking de jugadores:</h3>";
+  const contenedorRanking = document.getElementById("rankingJugadores");
+  contenedorRanking.innerHTML = "<h3>🏅 Ranking de jugadores:</h3>";
 
-    let lista = JSON.parse(localStorage.getItem("puntajesUsuarios")) || [];
-    lista.sort((a, b) => b.puntaje - a.puntaje);
+  let lista = JSON.parse(localStorage.getItem("puntajesUsuarios")) || [];
+  lista.sort((a, b) => b.puntaje - a.puntaje);
 
-    let listaHTML = "<ol>";
-    lista.forEach(j => {
-        listaHTML += `<li>${j.nombre} - ${j.puntaje} puntos</li>`;
-    });
-    listaHTML += "</ol>";
+  let listaHTML = "<ol>";
+  lista.forEach(j => {
+    listaHTML += `<li>${j.nombre} - ${j.puntaje} puntos</li>`;
+  });
+  listaHTML += "</ol>";
 
-    contenedorRanking.innerHTML += listaHTML;
-}
-
-function cambiarPantalla(idAnterior, idNueva) {
-    document.getElementById(idAnterior).classList.remove("activa");
-    document.getElementById(idNueva).classList.add("activa");
-}
-
-function reiniciarJuego() {
-    location.reload();
+  contenedorRanking.innerHTML += listaHTML;
 }
 
 function mostrarEstrellas(puntaje) {
-    const estrellasDiv = document.getElementById("estrellasFinales");
-    estrellasDiv.innerHTML = "";
-    const estrellas = Math.floor(puntaje / 30);
-    for (let i = 0; i < estrellas; i++) {
-        const estrella = document.createElement("span");
-        estrella.innerText = "⭐";
-        estrellasDiv.appendChild(estrella);
-    }
+  const estrellasDiv = document.getElementById("estrellasFinales");
+  estrellasDiv.innerHTML = "";
+  const estrellas = Math.floor(puntaje / 30);
+  for (let i = 0; i < estrellas; i++) {
+    const estrella = document.createElement("span");
+    estrella.innerText = "⭐";
+    estrellasDiv.appendChild(estrella);
+  }
 }
+
+function reiniciarJuego() {
+  location.reload();
+}
+
+// Sonidos
+const sonidoCorrecto = new Audio("assets/sonido_correcto.mp3");
+const sonidoIncorrecto = new Audio("assets/sonido_incorrecto.mp3");
+
 const seriesBiblicas = {
   moises: {
     titulo: "📜 Moisés y los Diez Mandamientos",
