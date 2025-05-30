@@ -57,9 +57,16 @@ const barraProgreso = document.getElementById("barraTiempoProgreso");
 const sonidoCorrecto = new Audio("assets/sonido_correcto.mp3");
 const sonidoIncorrecto = new Audio("assets/sonido_incorrecto.mp3");
 
-function mostrarOpcionesJuego() {
-    const opcionesJuegos = document.getElementById("opcionesJuegos");
-    opcionesJuegos.style.display = "block"; // Muestra las opciones de juego
+function iniciarJuego() {
+    const inputNombre = document.getElementById("nombreJugador");
+    if (!inputNombre.value.trim()) {
+        alert("Por favor, ingresa tu nombre.");
+        return;
+    }
+
+    nombreJugador = inputNombre.value.trim();
+    cambiarPantalla("pantallaInicio", "pantallaBienvenida");
+    document.getElementById("saludoUsuario").innerText = `¡Bienvenido, ${nombreJugador}!`;
 }
 
 function comenzarJuego() {
@@ -91,16 +98,13 @@ function mostrarPregunta() {
     const opcionesDiv = document.getElementById("opciones");
     opcionesDiv.innerHTML = "";
 
-    // Acceder a las opciones como un objeto
-    const opciones = preguntaActual.opciones;
-    for (const key in opciones) {
+    preguntaActual.opciones.forEach((opcion, index) => {
         const boton = document.createElement("button");
-        boton.innerText = opciones[key];
+        boton.innerText = opcion;
         boton.classList.add("btn-opcion");
-        // Pasamos la clave (letra) al verificar la respuesta
-        boton.onclick = () => verificarRespuesta(key);
+        boton.onclick = () => verificarRespuesta(index);
         opcionesDiv.appendChild(boton);
-    }
+    });
 
     document.getElementById("resultado").innerText = "";
     document.getElementById("puntaje").innerText = `Puntaje: ${puntaje}`;
@@ -112,28 +116,27 @@ function mostrarPregunta() {
         barraProgreso.style.width = `${(tiempo / 15) * 100}%`;
         if (tiempo <= 0) {
             clearInterval(temporizador);
-            verificarRespuesta(null); // indicamos que el tiempo se agotó
+            verificarRespuesta(-1);
         }
     }, 1000);
 }
 
-function verificarRespuesta(opcionSeleccionada) {
+function verificarRespuesta(indiceSeleccionado) {
     clearInterval(temporizador);
-    const preguntaActual = preguntas[indiceActual];
-    const correcta = preguntaActual.respuesta_correcta; // letra (por ejemplo, "b")
+    const correcta = preguntas[indiceActual].correcta;
     const resultado = document.getElementById("resultado");
 
-    if (opcionSeleccionada === correcta) {
+    if (indiceSeleccionado === correcta) {
         resultado.innerText = "✅ ¡Correcto!";
         resultado.className = "correcto fade-in";
         sonidoCorrecto.play();
         puntaje += 10;
-    } else if (opcionSeleccionada === null) {
-        resultado.innerText = `⏰ Tiempo agotado. La respuesta era: ${preguntaActual.opciones[correcta]}`;
+    } else if (indiceSeleccionado === -1) {
+        resultado.innerText = `⏰ Tiempo agotado. La respuesta era: ${preguntas[indiceActual].opciones[correcta]}`;
         resultado.className = "incorrecto fade-in";
         sonidoIncorrecto.play();
     } else {
-        resultado.innerText = `❌ Incorrecto. La respuesta era: ${preguntaActual.opciones[correcta]}`;
+        resultado.innerText = `❌ Incorrecto. La respuesta era: ${preguntas[indiceActual].opciones[correcta]}`;
         resultado.className = "incorrecto fade-in";
         sonidoIncorrecto.play();
     }
@@ -141,8 +144,72 @@ function verificarRespuesta(opcionSeleccionada) {
     document.getElementById("puntaje").innerText = `Puntaje: ${puntaje}`;
     document.getElementById("btnSiguiente").style.display = "inline-block";
 
-    // Deshabilita todos los botones de respuesta
     Array.from(document.getElementById("opciones").children).forEach(btn => btn.disabled = true);
+}
+
+function siguientePregunta() {
+    indiceActual++;
+    if (indiceActual < preguntas.length) {
+        mostrarPregunta();
+    } else {
+        mostrarPantallaFinal();
+    }
+}
+
+function mostrarPantallaFinal() {
+    document.getElementById("pantallaJuego").classList.remove("activa");
+    document.getElementById("pantallaFinal").classList.add("activa");
+
+    if (puntaje > puntajeMaximo) {
+        puntajeMaximo = puntaje;
+        localStorage.setItem("puntajeMaximo", puntajeMaximo);
+    }
+
+    document.getElementById("puntajeMaximo").innerText = `🏆 Puntaje más alto: ${puntajeMaximo}`;
+    document.getElementById("resumenFinal").innerText = `${nombreJugador}, tu puntaje final fue: ${puntaje}`;
+
+    let listaPuntajes = JSON.parse(localStorage.getItem("puntajesUsuarios")) || [];
+    listaPuntajes.push({ nombre: nombreJugador, puntaje: puntaje });
+    localStorage.setItem("puntajesUsuarios", JSON.stringify(listaPuntajes));
+
+    mostrarEstrellas(puntaje);
+    mostrarRanking();
+}
+
+function mostrarRanking() {
+    const contenedorRanking = document.getElementById("rankingJugadores");
+    contenedorRanking.innerHTML = "<h3>🏅 Ranking de jugadores:</h3>";
+
+    let lista = JSON.parse(localStorage.getItem("puntajesUsuarios")) || [];
+    lista.sort((a, b) => b.puntaje - a.puntaje);
+
+    let listaHTML = "<ol>";
+    lista.forEach(j => {
+        listaHTML += `<li>${j.nombre} - ${j.puntaje} puntos</li>`;
+    });
+    listaHTML += "</ol>";
+
+    contenedorRanking.innerHTML += listaHTML;
+}
+
+function cambiarPantalla(idAnterior, idNueva) {
+    document.getElementById(idAnterior).classList.remove("activa");
+    document.getElementById(idNueva).classList.add("activa");
+}
+
+function reiniciarJuego() {
+    location.reload();
+}
+
+function mostrarEstrellas(puntaje) {
+    const estrellasDiv = document.getElementById("estrellasFinales");
+    estrellasDiv.innerHTML = "";
+    const estrellas = Math.floor(puntaje / 30);
+    for (let i = 0; i < estrellas; i++) {
+        const estrella = document.createElement("span");
+        estrella.innerText = "⭐";
+        estrellasDiv.appendChild(estrella);
+    }
 }
 const seriesBiblicas = {
   moises: {
