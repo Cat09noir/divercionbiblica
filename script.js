@@ -89,14 +89,18 @@ function mostrarPregunta() {
     const preguntaActual = preguntas[indiceActual];
     document.getElementById("pregunta").innerText = preguntaActual.pregunta;
 
+    // Convertimos las opciones (objeto) a un arreglo usando las claves en el orden a, b, c, d
+    const keys = ["a", "b", "c", "d"];
     const opcionesDiv = document.getElementById("opciones");
     opcionesDiv.innerHTML = "";
 
-    preguntaActual.opciones.forEach((opcion, index) => {
+    keys.forEach(key => {
+        const textoOpcion = preguntaActual.opciones[key];
         const boton = document.createElement("button");
-        boton.innerText = opcion;
+        boton.innerText = textoOpcion;
         boton.classList.add("btn-opcion");
-        boton.onclick = () => verificarRespuesta(index);
+        // Pasamos la clave (letra) al verificar la respuesta
+        boton.onclick = () => verificarRespuesta(key);
         opcionesDiv.appendChild(boton);
     });
 
@@ -104,13 +108,14 @@ function mostrarPregunta() {
     document.getElementById("puntaje").innerText = `Puntaje: ${puntaje}`;
     document.getElementById("btnSiguiente").style.display = "none";
 
+    // Reinicia la barra de tiempo
     barraProgreso.style.width = "100%";
     temporizador = setInterval(() => {
         tiempo--;
         barraProgreso.style.width = `${(tiempo / 15) * 100}%`;
         if (tiempo <= 0) {
             clearInterval(temporizador);
-            verificarRespuesta(-1);
+            verificarRespuesta(null); // indicamos que el tiempo se agotó
         }
     }, 1000);
 }
