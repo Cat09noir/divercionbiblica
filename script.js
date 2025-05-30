@@ -62,16 +62,16 @@ function mostrarOpcionesJuego() {
     opcionesJuegos.style.display = "block"; // Muestra las opciones de juego
 }
 
-function comenzarJuego(juego) {
+function comenzarJuego() {
     fetch("preguntas_1000.json")
         .then(res => res.json())
         .then(data => {
+            // Si el JSON es un arreglo (como en tu ejemplo) o está dentro de una propiedad:
             const preguntasArray = Array.isArray(data) ? data : data.preguntas;
             if (!Array.isArray(preguntasArray)) {
                 throw new Error("La estructura del JSON es incorrecta.");
             }
-            // Filtrar preguntas según el juego seleccionado
-            preguntas = preguntasArray.filter(p => p.juego === juego).sort(() => Math.random() - 0.5).slice(0, 10);
+            preguntas = preguntasArray.sort(() => Math.random() - 0.5).slice(0, 10);
             indiceActual = 0;
             puntaje = 0;
             mostrarPregunta();
@@ -120,22 +120,23 @@ function mostrarPregunta() {
     }, 1000);
 }
 
-function verificarRespuesta(indiceSeleccionado) {
+function verificarRespuesta(opcionSeleccionada) {
     clearInterval(temporizador);
-    const correcta = preguntas[indiceActual].correcta;
+    const preguntaActual = preguntas[indiceActual];
+    const correcta = preguntaActual.respuesta_correcta; // letra (por ejemplo, "b")
     const resultado = document.getElementById("resultado");
 
-    if (indiceSeleccionado === correcta) {
+    if (opcionSeleccionada === correcta) {
         resultado.innerText = "✅ ¡Correcto!";
         resultado.className = "correcto fade-in";
         sonidoCorrecto.play();
         puntaje += 10;
-    } else if (indiceSeleccionado === -1) {
-        resultado.innerText = `⏰ Tiempo agotado. La respuesta era: ${preguntas[indiceActual].opciones[correcta]}`;
+    } else if (opcionSeleccionada === null) {
+        resultado.innerText = `⏰ Tiempo agotado. La respuesta era: ${preguntaActual.opciones[correcta]}`;
         resultado.className = "incorrecto fade-in";
         sonidoIncorrecto.play();
     } else {
-        resultado.innerText = `❌ Incorrecto. La respuesta era: ${preguntas[indiceActual].opciones[correcta]}`;
+        resultado.innerText = `❌ Incorrecto. La respuesta era: ${preguntaActual.opciones[correcta]}`;
         resultado.className = "incorrecto fade-in";
         sonidoIncorrecto.play();
     }
@@ -143,6 +144,7 @@ function verificarRespuesta(indiceSeleccionado) {
     document.getElementById("puntaje").innerText = `Puntaje: ${puntaje}`;
     document.getElementById("btnSiguiente").style.display = "inline-block";
 
+    // Deshabilita todos los botones de respuesta
     Array.from(document.getElementById("opciones").children).forEach(btn => btn.disabled = true);
 }
 
@@ -209,7 +211,6 @@ function mostrarEstrellas(puntaje) {
         estrella.innerText = "⭐";
         estrellasDiv.appendChild(estrella);
     }
-}
 const seriesBiblicas = {
   moises: {
     titulo: "📜 Moisés y los Diez Mandamientos",
